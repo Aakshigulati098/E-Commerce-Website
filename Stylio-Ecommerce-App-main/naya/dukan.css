@@ -1,0 +1,61 @@
+body {
+    font-family: "Cinzel", sans-serif;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('dukaan.jpeg');
+  }
+  
+  header {
+    margin-top: 100px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .cb h1 {
+    font-size: 8em;
+    line-height: 1.2;
+    margin: auto;
+    padding-top: 110px;
+    font-weight: lighter;
+    position: relative;
+  }
+  
+  .cb h1 em {
+    font-style: normal;
+    color: #ffffff;
+    display: inline-block;
+  }
+  
+  
+  
+  
+  @keyframes fadeInCenter {
+    from { opacity: 0; transform: translateY(-100%); } /* "translateY" for top entrance */
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fadeInLeft {
+    animation: fadeInLeft 2s ease-in-out forwards;
+}
+.fadeInRight {
+    animation: fadeInRight 2s ease-in-out forwards;
+}
+  .fadeInLeft.active,
+  .fadeInRight.active {
+    opacity: 1;
+    animation: none; /* Remove animation on active state */
+  }
+  
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(100%); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URBAN STYLE STORE</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/Stylio-Ecommerce-App-main/index.html">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 10000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .intro {
+    text-align: center;
+}
+
+.loader .intro h1 {
+    font-size: 124px;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #fff;
+    font-family: "Cinzel";
+}
+
+.intro-title .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+</style>
+<body>
+    <div class="loader">
+        
+        <div class="intro">
+            <h1 class="intro-title">URBAN STYLE STORE</h1>
+        </div>
+    </div>
+    
+    
+</body>
+<script >
+    document.addEventListener('DOMContentLoaded', function() {
+    // Selects the intro title element and wraps each letter in a span with class 'letter'
+    var textWrapper = document.querySelector(".intro-title");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+        /([^\x00-\x80]|\w)/g,
+        "<span class='letter'>$&</span>"
+    );
+
+    // Creates an animation sequence using Anime.js
+    anime.timeline({ loop: false })
+        .add({
+            targets: ".intro-title .letter",
+            translateX: [140, 0],
+            translateZ: 0,
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1400,
+            delay: function(el, i) {
+                return 500 + 50 * i;
+            }
+        })
+        .add({
+            targets: ".intro-title .letter",
+            translateX: [0, -140],
+            opacity: [1, 0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: function(el, i) {
+                return 700 + 50 * i;
+            }
+        });
+
+    // Moves the loader off the screen using TweenMax after 5 seconds
+    TweenMax.to(".loader", 2.2, {
+        delay: 5,
+        top: "-100%",
+        ease: Expo.easeInOut,
+        onComplete: function() {
+            // Hide the loader and show the main content
+            document.querySelector('.loader').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+    });
+
+    // Animations for other elements (examples given)
+    TweenMax.from(".logo", 2, {
+        delay: 6,
+        y: 10,
+        opacity: 0,
+        ease: Expo.easeInOut
+    });
+
+    TweenMax.from(".lang", 2, {
+        delay: 6.1,
+        y: 10,
+        opacity: 0,
+        ease: Expo.easeInOut
+    });
+
+    TweenMax.from(".left-img-cap", 2, {
+        delay: 6.2,
+        y: 10,
+        opacity: 0,
+        ease: Expo.easeInOut
+    });
+
+    TweenMax.staggerFrom(".social-media ul li", 2, {
+        delay: 6.3,
+        opacity: 0,
+        y: 20,
+        ease: Power3.easeInOut
+    }, 0.1);
+
+    TweenMax.from(".left-bottom-text", 2, {
+        delay: 6.4,
+        y: 10,
+        opacity: 0,
+        ease: Expo.easeInOut
+    });
+
+    TweenMax.from(".left-img-btn", 2, {
+        delay: 6.4,
+        scale: 0,
+        ease: Expo.easeInOut
+    });
+
+    TweenMax.from(".right-bottom-text", 2, {
+        delay: 6.7,
+        y: 10,
+        opacity: 0,
+        ease: Expo.easeInOut
+    });
+});
+
+</script>
+
+</html>

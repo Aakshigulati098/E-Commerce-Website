@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/swiper.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/Stylio-Ecommerce-App-main/index.html">
+    <!-- <link rel="stylesheet" href="naya/style.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+   <!-- <link rel="stylesheet" href="naya/style.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/icon.png" />
+    <title>
+      UrbanStyleStore
+    </title>
+    
+  </head>
+    <style>
+        #navbar .heading
+        {
+           padding-top: 8%;
+        }
+    </style>
+  <body>
+    
+    <div id="navbar">
+      <div class="heading">
+        <a href="index.html">URBANDUKAAN</a>
+      </div>
+      <div>
+        <a href="dukaan.html">
+          <p>HOME</p>
+        </a>
+      </div>
+      <div class="one" id="men_link">
+        <a href="./productsPage.html">
+          <p>START</p>
+        </a>
+      </div>
+      <div class="one" id="women_link">
+        <a href="./women.html">
+          <p>MANAGE</p>
+        </a>
+      </div>
+      <div class="one" id="kids_link">
+        <p>SELL</p>
+      </div>
+      
+      <div >
+        <a href="https://www.google.com/maps"></a>
+        <p></p>
+      </div>
+
+      <div id="subnavbar">
+        <div id="navbar_info">
+          <div>
+            <a href="terms.html"> <p>Terms and Conditions</p></a>
+           
+          </div>
+          <div id="navbar_signin_btn">
+            <a href="./signIn.html">Sign In / Join UrbanDukaan</a>
+          </div>
+        </div>
+        <div>
+          
+        
+         
+        </div>
+      </div>
+    </div>
+  
+
+   
+    <div class="Slider">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="./images/dukaan11.jpg"
+              alt="Sorry :)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+            src="./images/dukaan5.jpg"
+              alt="Sorry :)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+            src="./images/dukaan4.jpg"
+              alt="Sorry :)"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+            src="./images/dukaan6.jpg"
+              alt="Sorry :)"
+            />
+          </div>
+          
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      
+
+     
+
+      
+
+     
+
+      
+      
+     
+          
+
+
+      
+      
+      <div id="footer">
+        <div>
+          <img src="./images/footerIcons.jpeg" />
+        </div>
+        <div>
+          <div id="sub_footer">
+            <div>
+              <h4>Urban Dukaan</h4>
+              <p>Who We Are</p>
+              <p>Join Our Team</p>
+              <p>Terms & Conditions</p>
+              <p>We Respect Your Privacy</p>
+              <p>Fees & Payments</p>
+              <p>Returns & Refunds Policy</p>
+              <p>Promotions Terms & Conditions</p>
+            </div>
+            <div>
+              <h4>Help</h4>
+              <p>Track Your Order</p>
+              <p>Frequently Asked Questions</p>
+              <p>Returns</p>
+              <p>Cancellations</p>
+              <p>Payments</p>
+              <p>Customer Care</p>
+              <p>How Do I Redeem My Coupon</p>
+            </div>
+            <div>
+              <h4>Shop By</h4>
+              <p>Men</p>
+              <p>Women</p>
+              <p>Kids</p>
+              <p>Beauty</p>
+              <p>Stores</p>
+              <p>New Arrivals</p>
+              <p>Brand Directory</p>
+              <p>Home</p>
+              <p>Collections</p>
+            </div>
+            <div>
+              <h4>Follow us</h4>
+              <p>Facebook</p>
+              <p>Instagram</p>
+              <p>Twitter</p>
+              <p>Pinterest</p>
+            </div>
+          </div>
+          <div>
+            <img src="./images/footerBottom.jpeg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loader-container">
+        <img src="./images/aditi3.gif"></img>
+  </div>
+    <script src="script.js"></script>
+    <script src="naya/script1.js"></script>
+    <script src="./src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./src/swiper.js"></script>
+    <script>
+     function loader() {
+    document.querySelector('.loader-container').classList.add('fade-out');
+  }
+
+  function fadeOut() {
+    setInterval(loader, 1700);
+  }
+
+  window.onload = fadeOut;
+    </script>
+  </body>
+</html>
